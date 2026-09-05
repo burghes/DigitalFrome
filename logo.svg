@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 232 44" width="232" height="44" role="img" aria-label="Digital Frome">
+  <rect x="0" y="4" width="36" height="36" rx="8" fill="#14544a"/>
+  <path d="M9 15h18M9 22h18M9 29h11" stroke="#fdfaf4" stroke-width="3" stroke-linecap="round"/>
+  <text x="48" y="30" font-family="Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', -apple-system, 'Segoe UI', system-ui, sans-serif" font-size="23" font-weight="700" letter-spacing="-0.5">
+    <tspan fill="#24211d">Digital</tspan><tspan fill="#14544a" dx="5">Frome</tspan>
+  </text>
+</svg>

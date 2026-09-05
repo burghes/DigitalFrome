@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Digital Frome — friendly computer help in plain English</title>
+<meta name="description" content="Professional, jargon-free help with computers, phones and tablets, in your own home. Covering Frome, Trowbridge, Westbury, Warminster, Bradford on Avon, Radstock and Wells. £25 an hour, first conversation free.">
+<link rel="canonical" href="https://www.digitalfrome.co.uk/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Digital Frome — friendly computer help in plain English">
+<meta property="og:description" content="Professional, jargon-free help with computers, phones and tablets, in your own home. £25 an hour, first conversation free.">
+<meta property="og:url" content="https://www.digitalfrome.co.uk/">
+<meta property="og:locale" content="en_GB">
+<meta name="theme-color" content="#16584c">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2316584c'/%3E%3Cpath d='M9 12h14M9 16.5h14M9 21h8' stroke='%23fdfaf4' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
+
+<style>
+:root{
+  --ink:#24211d;
+  --ink-soft:#544d44;
+  --bg:#fdfaf4;
+  --bg-2:#f5eee2;
+  --green:#14544a;
+  --green-deep:#0e3b34;
+  --green-wash:#e2eee9;
+  --rust:#9c4a17;
+  --line:#e0d6c4;
+  --btn-bg:#14544a;
+  --btn-fg:#fdfaf4;
+  --shadow:0 1px 2px rgba(36,33,29,.06), 0 8px 24px -12px rgba(36,33,29,.18);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --ink:#efe9df;
+    --ink-soft:#bdb4a7;
+    --bg:#17150f;
+    --bg-2:#211e17;
+    --green:#7cc9b7;
+    --green-deep:#a8ddd0;
+    --green-wash:#1c302b;
+    --rust:#e79a68;
+    --line:#3a352c;
+    --btn-bg:#7cc9b7;
+    --btn-fg:#10201c;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+  }
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"Seravek","Gill Sans Nova",Ubuntu,Calibri,"DejaVu Sans",source-sans-pro,-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  font-size:19px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+@media (min-width:700px){ body{font-size:20px} }
+
+h1,h2,h3{line-height:1.2;letter-spacing:-.015em;margin:0 0 .5em}
+h1{font-size:clamp(2.1rem,6vw,3.2rem);font-weight:800}
+h2{font-size:clamp(1.5rem,3.6vw,2.05rem);font-weight:750}
+h3{font-size:1.15rem;font-weight:700}
+p{margin:0 0 1.1em}
+a{color:var(--green-deep)}
+@media (prefers-color-scheme: dark){ a{color:var(--green-deep)} }
+
+.wrap{max-width:760px;margin:0 auto;padding:0 22px}
+.wide{max-width:960px}
+section{padding:clamp(48px,7vw,82px) 0}
+.band{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+
+.skip{position:absolute;left:-9999px;top:0;background:var(--btn-bg);color:var(--btn-fg);padding:12px 18px;border-radius:0 0 8px 0;z-index:20}
+.skip:focus{left:0}
+a:focus,button:focus{outline:3px solid var(--rust);outline-offset:3px;border-radius:4px}
+:focus-visible{outline:3px solid var(--rust);outline-offset:3px;border-radius:4px}
+
+/* ---------- header ---------- */
+.masthead{border-top:6px solid var(--green);padding:20px 0 4px}
+.masthead .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:baseline;justify-content:space-between}
+.brand{display:inline-block;line-height:0}
+.brand img{height:44px;width:auto;display:block}
+.masthead .tagline{color:var(--ink-soft);font-size:.95rem;margin:0}
+
+/* ---------- hero ---------- */
+.hero{padding-top:clamp(28px,5vw,52px)}
+.hero p.lede{font-size:clamp(1.12rem,2.4vw,1.32rem);color:var(--ink-soft);max-width:32em}
+.hero strong{color:var(--ink)}
+
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin:32px 0 18px}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--btn-bg);color:var(--btn-fg);
+  text-decoration:none;font-weight:700;font-size:1.15rem;
+  padding:16px 26px;border-radius:10px;min-height:60px;
+  box-shadow:var(--shadow);
+}
+.btn:hover{background:var(--green-deep);color:var(--btn-fg)}
+@media (prefers-color-scheme: dark){ .btn:hover{background:var(--green-deep)} }
+.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--line);box-shadow:none}
+.btn.ghost:hover{border-color:var(--green);background:transparent;color:var(--ink)}
+.btn svg{flex:none}
+.note{color:var(--ink-soft);font-size:.98rem;margin:0}
+
+/* ---------- trust row ---------- */
+.trust{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px 12px}
+.trust li{
+  display:flex;align-items:center;gap:8px;
+  background:var(--green-wash);color:var(--green-deep);
+  border-radius:999px;padding:8px 16px;font-size:.95rem;font-weight:650;
+}
+.trust svg{flex:none}
+
+/* ---------- lists of help ---------- */
+.cards{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:34px;padding:0;list-style:none}
+.cards li{
+  background:var(--bg);border:1px solid var(--line);border-radius:12px;
+  padding:20px 22px;box-shadow:var(--shadow);
+}
+.band .cards li{background:var(--bg)}
+.cards h3{margin:0 0 .3em}
+.cards p{margin:0;color:var(--ink-soft);font-size:.98rem}
+
+/* ---------- steps ---------- */
+.steps{list-style:none;counter-reset:s;margin:32px 0 0;padding:0;display:grid;gap:24px}
+.steps li{counter-increment:s;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start}
+.steps li::before{
+  content:counter(s);
+  background:var(--green);color:var(--bg);
+  width:46px;height:46px;border-radius:50%;
+  display:grid;place-items:center;font-weight:800;font-size:1.15rem;
+}
+@media (prefers-color-scheme: dark){ .steps li::before{color:#10201c} }
+.steps h3{margin:.35em 0 .2em}
+.steps p{margin:0;color:var(--ink-soft)}
+
+/* ---------- price ---------- */
+.price{
+  border:2px solid var(--green);border-radius:14px;padding:clamp(24px,4vw,36px);
+  background:var(--bg);margin-top:8px;
+}
+.price .big{font-size:clamp(2.4rem,7vw,3.4rem);font-weight:800;line-height:1;color:var(--green-deep);letter-spacing:-.03em;display:block}
+.price .big small{font-size:1.1rem;font-weight:650;color:var(--ink-soft);letter-spacing:0}
+.plain{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:12px}
+.plain li{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start}
+.plain svg{margin-top:.35em;flex:none}
+
+/* ---------- safety ---------- */
+.safety{background:var(--green);color:#fdfaf4;border-radius:14px;padding:clamp(26px,4vw,38px)}
+@media (prefers-color-scheme: dark){ .safety{background:var(--green-wash);color:var(--ink)} }
+.safety h2{color:inherit;margin-top:0}
+.safety p{color:inherit;opacity:.95}
+.safety ul{margin:0;padding-left:1.3em}
+.safety li{margin-bottom:.6em}
+.safety li::marker{color:inherit}
+
+/* ---------- about ---------- */
+.about{display:grid;gap:32px;align-items:start}
+@media (min-width:760px){ .about{grid-template-columns:230px 1fr;gap:44px} }
+.portrait{
+  width:100%;min-height:230px;aspect-ratio:1;border-radius:14px;object-fit:cover;
+  background:var(--green-wash);border:1px solid var(--line);
+  display:grid;place-items:center;color:var(--ink-soft);font-size:.9rem;text-align:center;padding:14px;
+}
+
+/* ---------- area ---------- */
+.places{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:24px 0 0}
+.places li{border:1px solid var(--line);border-radius:8px;padding:8px 15px;font-weight:650}
+
+/* ---------- business footnote ---------- */
+.footnote-block{border-left:5px solid var(--line);padding-left:clamp(18px,3vw,28px)}
+
+/* ---------- contact ---------- */
+.contact-lines{display:grid;gap:14px;margin:26px 0 0;padding:0;list-style:none;font-size:1.15rem}
+.contact-lines a{font-weight:700}
+
+footer{border-top:1px solid var(--line);padding:38px 0;color:var(--ink-soft);font-size:.92rem}
+footer p{margin:0 0 .5em}
+
+@media print{
+  body{font-size:12pt;background:#fff;color:#000}
+  .btn,.skip{box-shadow:none}
+  section{padding:18pt 0}
+  .safety{background:#fff;color:#000;border:1pt solid #000}
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to the main content</a>
+
+<header class="masthead">
+  <div class="wrap wide">
+    <!-- REPLACE: swap logo.svg (and logo-dark.svg for dark mode) for your own logo.
+         Any format works — .svg, .png, .jpg. Keep the alt text as it is.
+         If you only have one logo, point both lines at the same file. -->
+    <a class="brand" href="/">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="logo-dark.svg">
+        <img src="logo.svg" alt="Digital Frome">
+      </picture>
+    </a>
+    <p class="tagline">Professional digital help, in plain English</p>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Digital help you can trust</h1>
+    <p class="lede">Professional support with computers, phones and tablets — in your own home, at your own pace. Over twenty years' experience, brought to your kitchen table. <strong>No jargon, no rushing, and no question treated as a silly one.</strong></p>
+
+    <div class="actions">
+      <a class="btn" href="tel:+447599790690">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        Ring me: 07599 790690
+      </a>
+      <a class="btn ghost" href="mailto:tim@digitalfrome.co.uk">Or send an email</a>
+    </div>
+    <p class="note">The first conversation is always free. Ring and describe the problem — if it isn't something I can help with, I'll tell you straight away and point you to someone who can.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <ul class="trust">
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>DBS checked</li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Fully insured</li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Registered with the ICO</li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Local, and here to stay</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap wide">
+    <h2>Things I help with every week</h2>
+    <p style="max-width:34em">If it plugs in, logs in or won't do what it's told, it's probably on this list. And if it isn't, ring me anyway.</p>
+
+    <ul class="cards">
+      <li>
+        <h3>Email that's stopped working</h3>
+        <p>Locked out, full inbox, messages vanishing, or a new address set up from scratch.</p>
+      </li>
+      <li>
+        <h3>A new phone, tablet or laptop</h3>
+        <p>Set up properly, your things moved across from the old one, and shown how to use it.</p>
+      </li>
+      <li>
+        <h3>Wi-fi that keeps dropping out</h3>
+        <p>Broadband, routers, black spots upstairs, and getting the telly connected.</p>
+      </li>
+      <li>
+        <h3>Photos</h3>
+        <p>Getting them off your phone, printing them, sharing them with family, backing them up so they can't be lost.</p>
+      </li>
+      <li>
+        <h3>Video calls with the family</h3>
+        <p>WhatsApp, FaceTime, Zoom — set up once and written down so you can do it on your own.</p>
+      </li>
+      <li>
+        <h3>Scams and staying safe</h3>
+        <p>What the dodgy messages look like, what to do if you've clicked one, and how to make your accounts harder to break into.</p>
+      </li>
+      <li>
+        <h3>Passwords you can actually remember</h3>
+        <p>An end to the scrap of paper by the kettle, without making life harder.</p>
+      </li>
+      <li>
+        <h3>Telly and streaming</h3>
+        <p>iPlayer, Netflix, Amazon Fire Sticks, and why the remote stopped working.</p>
+      </li>
+      <li>
+        <h3>A slow or cluttered computer</h3>
+        <p>Cleaned up and made usable again — or wiped safely if you're passing it on.</p>
+      </li>
+      <li>
+        <h3>Doing things online</h3>
+        <p>Shopping, banking, GP appointments, council forms, train tickets — at your pace, until you're happy.</p>
+      </li>
+      <li>
+        <h3>Printers</h3>
+        <p>The most infuriating object in any house. I'll have a go.</p>
+      </li>
+      <li>
+        <h3>Whatever's been bothering you</h3>
+        <p>Bring the list. Most people have one. There's no such thing as a silly question here.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2>How it works</h2>
+    <ol class="steps">
+      <li>
+        <div>
+          <h3>Ring or email me</h3>
+          <p>Tell me what's going wrong in your own words. This chat is free and there's no obligation at all.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>I come to you</h3>
+          <p>Almost always at your home, where the trouble actually is. We agree a day and a time that suits you.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>We sort it out together</h3>
+          <p>I'll show you what I'm doing rather than hunching over it in silence. You can watch every step.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>I write it down for you</h3>
+          <p>Before I leave, you get simple written notes for anything you'll need to do again. No relying on memory.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What it costs</h2>
+    <div class="price">
+      <span class="big">£25 <small>an hour</small></span>
+      <p style="margin:.7em 0 0;font-size:1.1rem"><strong>And the first chat is always free.</strong></p>
+      <ul class="plain">
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>No call-out fee and no charge for travel, anywhere in the area below.</span></li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>One hour minimum, then charged by the half hour. Most jobs take an hour or two.</span></li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Cash or bank transfer on the day. Nothing to pay up front, ever.</span></li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>If it turns out to be a five minute job, I'll tell you and I won't charge you for an hour.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="safety">
+      <h2>My promise on safety</h2>
+      <p>You have been told, quite rightly, to be careful about who you let near your computer. So here is exactly what I will never do:</p>
+      <ul>
+        <li><strong>I will never ask for your bank details or your card number.</strong></li>
+        <li><strong>I will never ring you out of the blue</strong> saying there's a problem with your computer. If someone does that, it's a scam — put the phone down.</li>
+        <li><strong>I will never ask to take control of your computer from somewhere else.</strong> I work with you, in your home, where you can see the screen.</li>
+        <li><strong>I will never ask you to pay before I've done the work.</strong></li>
+        <li><strong>Your passwords stay yours.</strong> Where I need one to fix something, you type it in, not me — and I'll tell you if anything ought to be changed afterwards.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Where I come to</h2>
+    <p>I cover Frome and the towns and villages around it. Travel is included — you won't pay extra for being at the far end of the area.</p>
+    <ul class="places">
+      <li>Frome</li>
+      <li>Trowbridge</li>
+      <li>Westbury</li>
+      <li>Warminster</li>
+      <li>Bradford on Avon</li>
+      <li>Radstock</li>
+      <li>Wells</li>
+      <li>and the villages in between</li>
+    </ul>
+    <p style="margin-top:26px" class="note">Not sure if you're in the area? Ring and ask — if you're just outside it I'll usually still come.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap wide">
+    <h2>Why you can trust me</h2>
+    <div class="about">
+      <!-- REPLACE: drop a square photo in as photo.jpg and swap this div for:
+           <img class="portrait" src="photo.jpg" alt="Tim, who runs Digital Frome"> -->
+      <div class="portrait">Photo<br>goes here</div>
+      <div>
+        <p>My name is Tim. I have worked in digital and technology for more than twenty years, and I currently lead marketing and communications for a regional business support organisation.</p>
+        <p>A large part of my work is teaching. I train business owners and their staff to use technology properly and to protect themselves online, and I advise organisations on keeping their information safe. Digital Frome brings that same professional experience to people at home, at a price that suits a household rather than a company.</p>
+        <p>Every visit is unhurried. I explain things in ordinary language, at whatever pace suits you, and I am perfectly happy to go over something two or three times until you're confident with it. Nobody is made to feel foolish for asking.</p>
+        <p>I am DBS checked, fully insured, and registered with the Information Commissioner's Office — the government body that oversees how personal information is looked after.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What I don't do</h2>
+    <p>I'd rather be straight with you than waste your time:</p>
+    <ul>
+      <li><strong>Hardware repairs.</strong> I don't open machines up to replace broken screens or parts. I'll tell you who does.</li>
+      <li><strong>Data recovery from a dead drive.</strong> If a hard disk has physically failed, that's a specialist job — I'll point you to one.</li>
+      <li><strong>An unlimited free helpline.</strong> A quick question afterwards is always fine and always free. If it turns into another job, we'll book another visit.</li>
+    </ul>
+  </div>
+</section>
+
+<!--
+  TESTIMONIALS — not live yet. Once you have two or three, delete this comment
+  wrapper and the section below will appear on the page.
+
+<section class="band">
+  <div class="wrap wide">
+    <h2>What people say</h2>
+    <ul class="cards">
+      <li><p>"Quote goes here."</p><p style="margin-top:.8em"><strong>— First name, Town</strong></p></li>
+      <li><p>"Quote goes here."</p><p style="margin-top:.8em"><strong>— First name, Town</strong></p></li>
+      <li><p>"Quote goes here."</p><p style="margin-top:.8em"><strong>— First name, Town</strong></p></li>
+    </ul>
+  </div>
+</section>
+-->
+
+<section class="band">
+  <div class="wrap">
+    <div class="footnote-block">
+      <h2 style="font-size:1.35rem">Running a small business?</h2>
+      <p>I also work with businesses and startups on digital marketing strategy, copywriting, LinkedIn profiles, getting practical value out of AI, and the basics of cyber security — including Cyber Essentials. Different work, same plain English. <a href="mailto:tim@digitalfrome.co.uk">Drop me a line</a> and we'll have a chat.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Let's have a chat</h2>
+    <p>Ring me and tell me what's going wrong. It costs nothing to ask, and you're not committing to anything.</p>
+
+    <div class="actions">
+      <a class="btn" href="tel:+447599790690">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        07599 790690
+      </a>
+    </div>
+
+    <ul class="contact-lines">
+      <li>Email: <a href="mailto:tim@digitalfrome.co.uk">tim@digitalfrome.co.uk</a></li>
+      <li>If I don't pick up, leave a message and I'll ring you back.</li>
+    </ul>
+
+    <p class="note" style="margin-top:26px">
+      <!-- REPLACE: put your next free date in below, and keep it up to date. -->
+      I take a limited number of appointments and they do get booked up, so please ring early if there is a particular day you need.
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap wide">
+    <p><strong>Digital Frome</strong> — professional, plain-English digital help across Frome and the surrounding towns.</p>
+    <p>07599 790690 · <a href="mailto:tim@digitalfrome.co.uk">tim@digitalfrome.co.uk</a></p>
+    <!-- REPLACE: add your ICO registration number below once you have it. -->
+    <p>Registered with the Information Commissioner's Office, reference [ICO NUMBER]. Public liability insurance in place. DBS checked.</p>
+    <p>This site sets no cookies and collects nothing about you.</p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "name":"Digital Frome",
+  "description":"Professional, jargon-free help with computers, phones and tablets, in your own home. Digital advice, digital skills, online safety and small business support.",
+  "url":"https://www.digitalfrome.co.uk/",
+  "telephone":"+44 7599 790690",
+  "email":"tim@digitalfrome.co.uk",
+  "founder":{"@type":"Person","name":"Tim"},
+  "priceRange":"££",
+  "address":{"@type":"PostalAddress","addressLocality":"Frome","addressRegion":"Somerset","addressCountry":"GB"},
+  "areaServed":[
+    {"@type":"City","name":"Frome"},
+    {"@type":"City","name":"Trowbridge"},
+    {"@type":"City","name":"Westbury"},
+    {"@type":"City","name":"Warminster"},
+    {"@type":"City","name":"Bradford on Avon"},
+    {"@type":"City","name":"Radstock"},
+    {"@type":"City","name":"Wells"}
+  ]
+}
+</script>
+
+</body>
+</html>
